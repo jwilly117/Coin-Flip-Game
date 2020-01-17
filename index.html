@@ -8,6 +8,11 @@
     <meta charset="UTF-8">
     <title>Coin Flipper</title>
 
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
   </head>
 
   <body>
@@ -18,7 +23,9 @@
 
     <button id="heads">Heads</button>
     <button id="tails">Tails</button>
-
+    <br>
+    <br>
+    <hr>
     <br>
 
     <div> You guessed:
@@ -112,7 +119,9 @@
 
     $("#tails").on("click", function() {
       tailsCount++;
-      $("#heads-chosen")
+      $("#tails-chosen").text(tailsCount);
+      $("#guess").html("<b>Tails!</b>");
+      flipThatCoin(0);
       //  STEP FOUR:
 
       //  Increment tailsCount by one.
